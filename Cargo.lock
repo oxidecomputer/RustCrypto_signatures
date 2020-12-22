@@ -21,12 +21,13 @@ dependencies = [
 
 [[package]]
 name = "bitvec"
-version = "0.18.4"
+version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d2838fdd79e8776dbe07a106c784b0f8dda571a21b2750a092cc4cbaa653c8e"
+checksum = "85131fd04df0806b6f14843b6a7369a127deefbd6f3e8ec4dbb4fd9ae3d3c5f1"
 dependencies = [
  "funty",
  "radium",
+ "tap",
  "wyz",
 ]
 
@@ -192,8 +193,7 @@ dependencies = [
 [[package]]
 name = "elliptic-curve"
 version = "0.8.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0fe963e4221e6518695d10fdd47558a0a1e8edcbb87faba1dc7a15052f63dc72"
+source = "git+https://github.com/oxidecomputer/RustCrypto_traits.git?branch=oxide_branch#a47ecc5a284111933aa825080c13316f5dd50f0b"
 dependencies = [
  "bitvec",
  "digest",
@@ -209,8 +209,7 @@ dependencies = [
 [[package]]
 name = "ff"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01646e077d4ebda82b73f1bca002ea1e91561a77df2431a9e79729bcc31950ef"
+source = "git+https://github.com/oxidecomputer/ff.git?branch=bitvec_bump#8a5080efae830d2f7e4c32d3ff8d149f60624984"
 dependencies = [
  "bitvec",
  "rand_core",
@@ -247,8 +246,7 @@ dependencies = [
 [[package]]
 name = "group"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc11f9f5fbf1943b48ae7c2bf6846e7d827a512d1be4f23af708f5ca5d01dde1"
+source = "git+https://github.com/oxidecomputer/group.git?branch=oxide_branch#2765948d91959e98093bb1629f8f3acc114f999b"
 dependencies = [
  "ff",
  "rand_core",
@@ -383,9 +381,9 @@ dependencies = [
 
 [[package]]
 name = "radium"
-version = "0.4.1"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64de9a0c5361e034f1aefc9f71a86871ec870e766fe31a009734a989b329286a"
+checksum = "e9e006811e1fdd12672b0820a7f44c18dde429f367d50cec003d22aa9b3c8ddc"
 
 [[package]]
 name = "rand"
@@ -532,6 +530,12 @@ dependencies = [
  "syn",
  "unicode-xid",
 ]
+
+[[package]]
+name = "tap"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "36474e732d1affd3a6ed582781b3683df3d0563714c59c39591e8ff707cf078e"
 
 [[package]]
 name = "typenum"
